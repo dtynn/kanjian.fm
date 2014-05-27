@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		575BCD2119347BE700866D1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575BCD2019347BE700866D1D /* Foundation.framework */; };
+		575BCD2319347BE700866D1D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575BCD2219347BE700866D1D /* CoreGraphics.framework */; };
+		575BCD2519347BE700866D1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575BCD2419347BE700866D1D /* UIKit.framework */; };
+		575BCD2B19347BE700866D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 575BCD2919347BE700866D1D /* InfoPlist.strings */; };
+		575BCD2D19347BE700866D1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 575BCD2C19347BE700866D1D /* main.m */; };
+		575BCD3119347BE700866D1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 575BCD3019347BE700866D1D /* AppDelegate.m */; };
+		575BCD3419347BE700866D1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575BCD3219347BE700866D1D /* Main.storyboard */; };
+		575BCD3719347BE700866D1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575BCD3619347BE700866D1D /* ViewController.m */; };
+		575BCD3919347BE700866D1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575BCD3819347BE700866D1D /* Images.xcassets */; };
+		575BCD4019347BE700866D1D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575BCD3F19347BE700866D1D /* XCTest.framework */; };
+		575BCD4119347BE700866D1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575BCD2019347BE700866D1D /* Foundation.framework */; };
+		575BCD4219347BE700866D1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575BCD2419347BE700866D1D /* UIKit.framework */; };
+		575BCD4A19347BE700866D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 575BCD4819347BE700866D1D /* InfoPlist.strings */; };
+		575BCD4C19347BE700866D1D /* demo_KanjianFMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 575BCD4B19347BE700866D1D /* demo_KanjianFMTests.m */; };
+		575BCD5719347C1D00866D1D /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 575BCD5619347C1D00866D1D /* Playlist.m */; };
+		575BCD5A19347C6B00866D1D /* SongItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 575BCD5919347C6B00866D1D /* SongItem.m */; };
+		575BCD5D1934825C00866D1D /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 575BCD5C1934825C00866D1D /* DataModel.m */; };
+		5777B09D19349CBA008C67E1 /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777B08B19349CBA008C67E1 /* NSMutableArray+STKAudioPlayer.m */; };
+		5777B09E19349CBA008C67E1 /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777B08D19349CBA008C67E1 /* STKAudioPlayer.m */; };
+		5777B09F19349CBA008C67E1 /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777B08F19349CBA008C67E1 /* STKAutoRecoveringHTTPDataSource.m */; };
+		5777B0A019349CBA008C67E1 /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777B09119349CBA008C67E1 /* STKCoreFoundationDataSource.m */; };
+		5777B0A119349CBA008C67E1 /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777B09319349CBA008C67E1 /* STKDataSource.m */; };
+		5777B0A219349CBA008C67E1 /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777B09519349CBA008C67E1 /* STKDataSourceWrapper.m */; };
+		5777B0A319349CBA008C67E1 /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777B09719349CBA008C67E1 /* STKHTTPDataSource.m */; };
+		5777B0A419349CBA008C67E1 /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777B09919349CBA008C67E1 /* STKLocalFileDataSource.m */; };
+		5777B0A519349CBA008C67E1 /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777B09B19349CBA008C67E1 /* STKQueueEntry.m */; };
+		5778EF031934B3170088ABE9 /* QueueId.m in Sources */ = {isa = PBXBuildFile; fileRef = 5778EF021934B3170088ABE9 /* QueueId.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		575BCD4319347BE700866D1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 575BCD1519347BE700866D1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 575BCD1C19347BE700866D1D;
+			remoteInfo = demo_KanjianFM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		575BCD1D19347BE700866D1D /* demo_KanjianFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo_KanjianFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		575BCD2019347BE700866D1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		575BCD2219347BE700866D1D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		575BCD2419347BE700866D1D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		575BCD2819347BE700866D1D /* demo_KanjianFM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "demo_KanjianFM-Info.plist"; sourceTree = "<group>"; };
+		575BCD2A19347BE700866D1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		575BCD2C19347BE700866D1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		575BCD2E19347BE700866D1D /* demo_KanjianFM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "demo_KanjianFM-Prefix.pch"; sourceTree = "<group>"; };
+		575BCD2F19347BE700866D1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		575BCD3019347BE700866D1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		575BCD3319347BE700866D1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		575BCD3519347BE700866D1D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		575BCD3619347BE700866D1D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		575BCD3819347BE700866D1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		575BCD3E19347BE700866D1D /* demo_KanjianFMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demo_KanjianFMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		575BCD3F19347BE700866D1D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		575BCD4719347BE700866D1D /* demo_KanjianFMTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "demo_KanjianFMTests-Info.plist"; sourceTree = "<group>"; };
+		575BCD4919347BE700866D1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		575BCD4B19347BE700866D1D /* demo_KanjianFMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demo_KanjianFMTests.m; sourceTree = "<group>"; };
+		575BCD5519347C1D00866D1D /* Playlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Playlist.h; sourceTree = "<group>"; };
+		575BCD5619347C1D00866D1D /* Playlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Playlist.m; sourceTree = "<group>"; };
+		575BCD5819347C6B00866D1D /* SongItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongItem.h; sourceTree = "<group>"; };
+		575BCD5919347C6B00866D1D /* SongItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongItem.m; sourceTree = "<group>"; };
+		575BCD5B1934825C00866D1D /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		575BCD5C1934825C00866D1D /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		5777B08A19349CBA008C67E1 /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+STKAudioPlayer.h"; sourceTree = "<group>"; };
+		5777B08B19349CBA008C67E1 /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+STKAudioPlayer.m"; sourceTree = "<group>"; };
+		5777B08C19349CBA008C67E1 /* STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAudioPlayer.h; sourceTree = "<group>"; };
+		5777B08D19349CBA008C67E1 /* STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAudioPlayer.m; sourceTree = "<group>"; };
+		5777B08E19349CBA008C67E1 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAutoRecoveringHTTPDataSource.h; sourceTree = "<group>"; };
+		5777B08F19349CBA008C67E1 /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAutoRecoveringHTTPDataSource.m; sourceTree = "<group>"; };
+		5777B09019349CBA008C67E1 /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKCoreFoundationDataSource.h; sourceTree = "<group>"; };
+		5777B09119349CBA008C67E1 /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKCoreFoundationDataSource.m; sourceTree = "<group>"; };
+		5777B09219349CBA008C67E1 /* STKDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKDataSource.h; sourceTree = "<group>"; };
+		5777B09319349CBA008C67E1 /* STKDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKDataSource.m; sourceTree = "<group>"; };
+		5777B09419349CBA008C67E1 /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKDataSourceWrapper.h; sourceTree = "<group>"; };
+		5777B09519349CBA008C67E1 /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKDataSourceWrapper.m; sourceTree = "<group>"; };
+		5777B09619349CBA008C67E1 /* STKHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKHTTPDataSource.h; sourceTree = "<group>"; };
+		5777B09719349CBA008C67E1 /* STKHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKHTTPDataSource.m; sourceTree = "<group>"; };
+		5777B09819349CBA008C67E1 /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKLocalFileDataSource.h; sourceTree = "<group>"; };
+		5777B09919349CBA008C67E1 /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKLocalFileDataSource.m; sourceTree = "<group>"; };
+		5777B09A19349CBA008C67E1 /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueEntry.h; sourceTree = "<group>"; };
+		5777B09B19349CBA008C67E1 /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueEntry.m; sourceTree = "<group>"; };
+		5777B09C19349CBA008C67E1 /* StreamingKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StreamingKit-Prefix.pch"; sourceTree = "<group>"; };
+		5778EF011934B3170088ABE9 /* QueueId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueId.h; sourceTree = "<group>"; };
+		5778EF021934B3170088ABE9 /* QueueId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueId.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		575BCD1A19347BE700866D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				575BCD2319347BE700866D1D /* CoreGraphics.framework in Frameworks */,
+				575BCD2519347BE700866D1D /* UIKit.framework in Frameworks */,
+				575BCD2119347BE700866D1D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		575BCD3B19347BE700866D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				575BCD4019347BE700866D1D /* XCTest.framework in Frameworks */,
+				575BCD4219347BE700866D1D /* UIKit.framework in Frameworks */,
+				575BCD4119347BE700866D1D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		575BCD1419347BE700866D1D = {
+			isa = PBXGroup;
+			children = (
+				575BCD2619347BE700866D1D /* demo_KanjianFM */,
+				575BCD4519347BE700866D1D /* demo_KanjianFMTests */,
+				575BCD1F19347BE700866D1D /* Frameworks */,
+				575BCD1E19347BE700866D1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		575BCD1E19347BE700866D1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				575BCD1D19347BE700866D1D /* demo_KanjianFM.app */,
+				575BCD3E19347BE700866D1D /* demo_KanjianFMTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		575BCD1F19347BE700866D1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				575BCD2019347BE700866D1D /* Foundation.framework */,
+				575BCD2219347BE700866D1D /* CoreGraphics.framework */,
+				575BCD2419347BE700866D1D /* UIKit.framework */,
+				575BCD3F19347BE700866D1D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		575BCD2619347BE700866D1D /* demo_KanjianFM */ = {
+			isa = PBXGroup;
+			children = (
+				575BCD2F19347BE700866D1D /* AppDelegate.h */,
+				575BCD3019347BE700866D1D /* AppDelegate.m */,
+				575BCD3219347BE700866D1D /* Main.storyboard */,
+				575BCD5B1934825C00866D1D /* DataModel.h */,
+				575BCD5C1934825C00866D1D /* DataModel.m */,
+				575BCD3519347BE700866D1D /* ViewController.h */,
+				575BCD3619347BE700866D1D /* ViewController.m */,
+				575BCD3819347BE700866D1D /* Images.xcassets */,
+				575BCD2719347BE700866D1D /* Supporting Files */,
+				575BCD5519347C1D00866D1D /* Playlist.h */,
+				575BCD5619347C1D00866D1D /* Playlist.m */,
+				575BCD5819347C6B00866D1D /* SongItem.h */,
+				575BCD5919347C6B00866D1D /* SongItem.m */,
+				5777B08919349CBA008C67E1 /* StreamingKit */,
+				5778EF011934B3170088ABE9 /* QueueId.h */,
+				5778EF021934B3170088ABE9 /* QueueId.m */,
+			);
+			path = demo_KanjianFM;
+			sourceTree = "<group>";
+		};
+		575BCD2719347BE700866D1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				575BCD2819347BE700866D1D /* demo_KanjianFM-Info.plist */,
+				575BCD2919347BE700866D1D /* InfoPlist.strings */,
+				575BCD2C19347BE700866D1D /* main.m */,
+				575BCD2E19347BE700866D1D /* demo_KanjianFM-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		575BCD4519347BE700866D1D /* demo_KanjianFMTests */ = {
+			isa = PBXGroup;
+			children = (
+				575BCD4B19347BE700866D1D /* demo_KanjianFMTests.m */,
+				575BCD4619347BE700866D1D /* Supporting Files */,
+			);
+			path = demo_KanjianFMTests;
+			sourceTree = "<group>";
+		};
+		575BCD4619347BE700866D1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				575BCD4719347BE700866D1D /* demo_KanjianFMTests-Info.plist */,
+				575BCD4819347BE700866D1D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5777B08919349CBA008C67E1 /* StreamingKit */ = {
+			isa = PBXGroup;
+			children = (
+				5777B08A19349CBA008C67E1 /* NSMutableArray+STKAudioPlayer.h */,
+				5777B08B19349CBA008C67E1 /* NSMutableArray+STKAudioPlayer.m */,
+				5777B08C19349CBA008C67E1 /* STKAudioPlayer.h */,
+				5777B08D19349CBA008C67E1 /* STKAudioPlayer.m */,
+				5777B08E19349CBA008C67E1 /* STKAutoRecoveringHTTPDataSource.h */,
+				5777B08F19349CBA008C67E1 /* STKAutoRecoveringHTTPDataSource.m */,
+				5777B09019349CBA008C67E1 /* STKCoreFoundationDataSource.h */,
+				5777B09119349CBA008C67E1 /* STKCoreFoundationDataSource.m */,
+				5777B09219349CBA008C67E1 /* STKDataSource.h */,
+				5777B09319349CBA008C67E1 /* STKDataSource.m */,
+				5777B09419349CBA008C67E1 /* STKDataSourceWrapper.h */,
+				5777B09519349CBA008C67E1 /* STKDataSourceWrapper.m */,
+				5777B09619349CBA008C67E1 /* STKHTTPDataSource.h */,
+				5777B09719349CBA008C67E1 /* STKHTTPDataSource.m */,
+				5777B09819349CBA008C67E1 /* STKLocalFileDataSource.h */,
+				5777B09919349CBA008C67E1 /* STKLocalFileDataSource.m */,
+				5777B09A19349CBA008C67E1 /* STKQueueEntry.h */,
+				5777B09B19349CBA008C67E1 /* STKQueueEntry.m */,
+				5777B09C19349CBA008C67E1 /* StreamingKit-Prefix.pch */,
+			);
+			path = StreamingKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		575BCD1C19347BE700866D1D /* demo_KanjianFM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 575BCD4F19347BE700866D1D /* Build configuration list for PBXNativeTarget "demo_KanjianFM" */;
+			buildPhases = (
+				575BCD1919347BE700866D1D /* Sources */,
+				575BCD1A19347BE700866D1D /* Frameworks */,
+				575BCD1B19347BE700866D1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = demo_KanjianFM;
+			productName = demo_KanjianFM;
+			productReference = 575BCD1D19347BE700866D1D /* demo_KanjianFM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		575BCD3D19347BE700866D1D /* demo_KanjianFMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 575BCD5219347BE700866D1D /* Build configuration list for PBXNativeTarget "demo_KanjianFMTests" */;
+			buildPhases = (
+				575BCD3A19347BE700866D1D /* Sources */,
+				575BCD3B19347BE700866D1D /* Frameworks */,
+				575BCD3C19347BE700866D1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				575BCD4419347BE700866D1D /* PBXTargetDependency */,
+			);
+			name = demo_KanjianFMTests;
+			productName = demo_KanjianFMTests;
+			productReference = 575BCD3E19347BE700866D1D /* demo_KanjianFMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		575BCD1519347BE700866D1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = dtynn;
+				TargetAttributes = {
+					575BCD3D19347BE700866D1D = {
+						TestTargetID = 575BCD1C19347BE700866D1D;
+					};
+				};
+			};
+			buildConfigurationList = 575BCD1819347BE700866D1D /* Build configuration list for PBXProject "demo_KanjianFM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 575BCD1419347BE700866D1D;
+			productRefGroup = 575BCD1E19347BE700866D1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				575BCD1C19347BE700866D1D /* demo_KanjianFM */,
+				575BCD3D19347BE700866D1D /* demo_KanjianFMTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		575BCD1B19347BE700866D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				575BCD3919347BE700866D1D /* Images.xcassets in Resources */,
+				575BCD2B19347BE700866D1D /* InfoPlist.strings in Resources */,
+				575BCD3419347BE700866D1D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		575BCD3C19347BE700866D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				575BCD4A19347BE700866D1D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		575BCD1919347BE700866D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				575BCD3719347BE700866D1D /* ViewController.m in Sources */,
+				575BCD3119347BE700866D1D /* AppDelegate.m in Sources */,
+				575BCD2D19347BE700866D1D /* main.m in Sources */,
+				5777B0A219349CBA008C67E1 /* STKDataSourceWrapper.m in Sources */,
+				5777B0A319349CBA008C67E1 /* STKHTTPDataSource.m in Sources */,
+				5777B0A419349CBA008C67E1 /* STKLocalFileDataSource.m in Sources */,
+				5778EF031934B3170088ABE9 /* QueueId.m in Sources */,
+				575BCD5719347C1D00866D1D /* Playlist.m in Sources */,
+				5777B0A119349CBA008C67E1 /* STKDataSource.m in Sources */,
+				5777B09E19349CBA008C67E1 /* STKAudioPlayer.m in Sources */,
+				5777B09D19349CBA008C67E1 /* NSMutableArray+STKAudioPlayer.m in Sources */,
+				5777B09F19349CBA008C67E1 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				5777B0A019349CBA008C67E1 /* STKCoreFoundationDataSource.m in Sources */,
+				575BCD5A19347C6B00866D1D /* SongItem.m in Sources */,
+				575BCD5D1934825C00866D1D /* DataModel.m in Sources */,
+				5777B0A519349CBA008C67E1 /* STKQueueEntry.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		575BCD3A19347BE700866D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				575BCD4C19347BE700866D1D /* demo_KanjianFMTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		575BCD4419347BE700866D1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 575BCD1C19347BE700866D1D /* demo_KanjianFM */;
+			targetProxy = 575BCD4319347BE700866D1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		575BCD2919347BE700866D1D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				575BCD2A19347BE700866D1D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		575BCD3219347BE700866D1D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				575BCD3319347BE700866D1D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		575BCD4819347BE700866D1D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				575BCD4919347BE700866D1D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		575BCD4D19347BE700866D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		575BCD4E19347BE700866D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		575BCD5019347BE700866D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "demo_KanjianFM/demo_KanjianFM-Prefix.pch";
+				INFOPLIST_FILE = "demo_KanjianFM/demo_KanjianFM-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		575BCD5119347BE700866D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "demo_KanjianFM/demo_KanjianFM-Prefix.pch";
+				INFOPLIST_FILE = "demo_KanjianFM/demo_KanjianFM-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		575BCD5319347BE700866D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/demo_KanjianFM.app/demo_KanjianFM";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "demo_KanjianFM/demo_KanjianFM-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "demo_KanjianFMTests/demo_KanjianFMTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		575BCD5419347BE700866D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/demo_KanjianFM.app/demo_KanjianFM";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "demo_KanjianFM/demo_KanjianFM-Prefix.pch";
+				INFOPLIST_FILE = "demo_KanjianFMTests/demo_KanjianFMTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		575BCD1819347BE700866D1D /* Build configuration list for PBXProject "demo_KanjianFM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				575BCD4D19347BE700866D1D /* Debug */,
+				575BCD4E19347BE700866D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		575BCD4F19347BE700866D1D /* Build configuration list for PBXNativeTarget "demo_KanjianFM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				575BCD5019347BE700866D1D /* Debug */,
+				575BCD5119347BE700866D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		575BCD5219347BE700866D1D /* Build configuration list for PBXNativeTarget "demo_KanjianFMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				575BCD5319347BE700866D1D /* Debug */,
+				575BCD5419347BE700866D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 575BCD1519347BE700866D1D /* Project object */;
+}
