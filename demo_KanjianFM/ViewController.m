@@ -24,6 +24,46 @@
     [super viewWillAppear:animated];
     self.logoViewer.image = [UIImage imageNamed:@"kanjianfm"];
     [self loadAudioPlayer];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+    [self resignFirstResponder];
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    if (event.type == UIEventTypeRemoteControl) {
+        switch (event.subtype) {
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
+                    [_audioPlayer pause];
+                } else if (_audioPlayer.state == STKAudioPlayerStatePaused) {
+                    [_audioPlayer resume];
+                }
+                break;
+                
+            case UIEventSubtypeRemoteControlPlay:
+                if (_audioPlayer.state == STKAudioPlayerStatePaused) {
+                    [_audioPlayer resume];
+                }
+                break;
+                
+            case UIEventSubtypeRemoteControlPause:
+                if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
+                    [_audioPlayer pause];
+                }
+                break;
+                
+            default:
+                break;
+        }
+    }
 }
 
 - (void)reload:(id)sender {

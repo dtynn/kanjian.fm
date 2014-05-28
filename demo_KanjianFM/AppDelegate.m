@@ -45,8 +45,6 @@
     _audioPlayer.meteringEnabled = YES;
     _audioPlayer.volume = 1.0;
     
-    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-    [self becomeFirstResponder];
     return YES;
 }
 
@@ -79,7 +77,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
 }
 
 - (STKAudioPlayer *)getAudioPlayer {
@@ -98,35 +95,6 @@
 - (void)audioPlayerViewDifFinishPlaying {
     _dataModel.playingIndex = -1;
     [self configurePlayingInfoWithSong:nil];
-}
-
-- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
-    if (event.type == UIEventTypeRemoteControl) {
-        switch (event.subtype) {
-            case UIEventSubtypeRemoteControlTogglePlayPause:
-                if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
-                    [_audioPlayer pause];
-                } else if (_audioPlayer.state == STKAudioPlayerStatePaused) {
-                    [_audioPlayer resume];
-                }
-                break;
-                
-            case UIEventSubtypeRemoteControlPlay:
-                if (_audioPlayer.state == STKAudioPlayerStatePaused) {
-                    [_audioPlayer resume];
-                }
-                break;
-                
-            case UIEventSubtypeRemoteControlPause:
-                if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
-                    [_audioPlayer pause];
-                }
-                break;
-                
-            default:
-                break;
-        }
-    }
 }
 
 - (void)configurePlayingInfoWithSong:(SongItem *)song {
