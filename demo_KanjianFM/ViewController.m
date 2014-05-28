@@ -149,6 +149,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellPlaylistItem"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     SongItem *item = [self.dataModel selectSongInPlaylistAtIndex:indexPath.row];
     cell.textLabel.text = item.title;
     if (self.dataModel.playingIndex == indexPath.row) {
@@ -182,7 +184,7 @@
     } else if (_audioPlayer.state == STKAudioPlayerStatePaused) {
         [_audioPlayer resume];
     }
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma STKAudioPlayerDelegate
