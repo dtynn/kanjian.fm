@@ -31,6 +31,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
     [self resignFirstResponder];
+    [super viewWillDisappear:animated];
 }
 
 - (BOOL)canBecomeFirstResponder {
