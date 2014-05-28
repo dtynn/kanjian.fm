@@ -74,18 +74,17 @@
 }
 
 - (void)updatePlayerState {
-    if (!_audioPlayer) {
+    if (!_audioPlayer || self.dataModel.playingIndex == -1) {
         return;
     }
     if (_audioPlayer.state == STKAudioPlayerStateStopped) {
         NSLog(@"### STOPED ###");
         self.dataModel.playingIndex = -1;
-        [self.tableView reloadData];
-    } else if (_audioPlayer.state == STKAudioPlayerStateBuffering) {
-        NSLog(@"### BUFFERING ###");
-    } else if (_audioPlayer.state == STKAudioPlayerStateReady) {
-        NSLog(@"### READY ###");
     }
+    if (_audioPlayer.state != STKAudioPlayerStatePlaying && _audioPlayer.state != STKAudioPlayerStatePaused && _audioPlayer.state != STKAudioPlayerStateBuffering && _audioPlayer.state != STKAudioPlayerStateStopped) {
+        return;
+    }
+    [self.tableView reloadData];
 }
 
 - (void)configureSliderWithMin:(double)min andMax:(double)max andValue:(double)value {
@@ -101,7 +100,8 @@
     [_audioPlayer seekToTime:self.slider.value];
 }
 
-//table view
+#pragma UITableView
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.dataModel numberOfSongsInPlaylist];
 }
@@ -112,8 +112,20 @@
     cell.textLabel.text = item.title;
     if (self.dataModel.playingIndex == indexPath.row) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        NSLog(@"detail state");
+        if (_audioPlayer.state == STKAudioPlayerStateBuffering) {
+            cell.detailTextLabel.text = @"buffering";
+        }else if (_audioPlayer.state == STKAudioPlayerStatePaused) {
+            cell.detailTextLabel.text = @"paused";
+        } else if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
+            cell.detailTextLabel.text = @"playing";
+        } else {
+            NSLog(@"no state");
+            cell.detailTextLabel.text = @"";
+        }
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.detailTextLabel.text = @"";
     }
     return cell;
 }
@@ -124,11 +136,16 @@
         self.dataModel.playingIndex = indexPath.row;
         [self.tableView reloadData];
         [self.delegate audioPlayerViewPlay:self withUrl:song.url];
+    } else if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
+        [_audioPlayer pause];
+    } else if (_audioPlayer.state == STKAudioPlayerStatePaused) {
+        [_audioPlayer resume];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-//audio player delegate
+#pragma STKAudioPlayerDelegate
+
 - (void)audioPlayer:(STKAudioPlayer *)audioPlayer unexpectedError:(STKAudioPlayerErrorCode)errorCode {
     
 }
