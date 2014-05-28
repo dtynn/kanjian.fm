@@ -105,7 +105,7 @@
         switch (event.subtype) {
             case UIEventSubtypeRemoteControlTogglePlayPause:
                 if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
-                    [_audioPlayer resume];
+                    [_audioPlayer pause];
                 } else if (_audioPlayer.state == STKAudioPlayerStatePaused) {
                     [_audioPlayer resume];
                 }
