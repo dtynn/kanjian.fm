@@ -194,6 +194,7 @@
         self.dataModel.playingIndex = indexPath.row;
         [self.tableView reloadData];
         [self.delegate audioPlayerViewPlay:self withSong:song];
+        [self tick];
     } else if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
         [_audioPlayer pause];
     } else if (_audioPlayer.state == STKAudioPlayerStatePaused) {
