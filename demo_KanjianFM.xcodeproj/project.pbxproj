@@ -44,6 +44,7 @@
 		57AC612719356D3600E98BCE /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC611D19356D3600E98BCE /* AFURLResponseSerialization.m */; };
 		57AC612819356D3600E98BCE /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC611F19356D3600E98BCE /* AFURLSessionManager.m */; };
 		57AC612B19356DE400E98BCE /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC612A19356DE400E98BCE /* APIClient.m */; };
+		57D97A5E1935FC1000A5F2C5 /* DTWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D97A5D1935FC1000A5F2C5 /* DTWaveView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		57AC611F19356D3600E98BCE /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		57AC612919356DE400E98BCE /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		57AC612A19356DE400E98BCE /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		57D97A5C1935FC1000A5F2C5 /* DTWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTWaveView.h; sourceTree = "<group>"; };
+		57D97A5D1935FC1000A5F2C5 /* DTWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTWaveView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 				575BCD3019347BE700866D1D /* AppDelegate.m */,
 				575BCD3219347BE700866D1D /* Main.storyboard */,
 				575BCD5B1934825C00866D1D /* DataModel.h */,
+				57D97A5C1935FC1000A5F2C5 /* DTWaveView.h */,
+				57D97A5D1935FC1000A5F2C5 /* DTWaveView.m */,
 				575BCD5C1934825C00866D1D /* DataModel.m */,
 				575BCD3519347BE700866D1D /* ViewController.h */,
 				575BCD3619347BE700866D1D /* ViewController.m */,
@@ -388,6 +393,7 @@
 				57AC612519356D3600E98BCE /* AFURLConnectionOperation.m in Sources */,
 				575BCD3719347BE700866D1D /* ViewController.m in Sources */,
 				57AC612219356D3600E98BCE /* AFHTTPSessionManager.m in Sources */,
+				57D97A5E1935FC1000A5F2C5 /* DTWaveView.m in Sources */,
 				57AC612319356D3600E98BCE /* AFNetworkReachabilityManager.m in Sources */,
 				575BCD3119347BE700866D1D /* AppDelegate.m in Sources */,
 				575BCD2D19347BE700866D1D /* main.m in Sources */,

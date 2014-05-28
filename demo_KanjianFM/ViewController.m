@@ -10,6 +10,7 @@
 #import "DataModel.h"
 #import "SongItem.h"
 #import "STKAudioPlayer.h"
+#import "DTWaveView.h"
 
 
 @interface ViewController ()
@@ -18,6 +19,7 @@
 
 @implementation ViewController {
     STKAudioPlayer *_audioPlayer;
+//    DTWaveView *_dtView;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -26,6 +28,10 @@
     [self loadAudioPlayer];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
+    
+    //for test
+//    _dtView = [[DTWaveView alloc] initWithFrame:CGRectMake(160, 40, 120, 120)];
+//    [self.view addSubview:_dtView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -98,11 +104,12 @@
 }
 
 - (void)setupTimer {
-    NSTimer *timer =[NSTimer timerWithTimeInterval:0.01 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+    NSTimer *timer =[NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(tick) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop]addTimer:timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)tick {
+    //slider
     if (!_audioPlayer) {
         self.slider.value = 0;
         return;
@@ -112,6 +119,14 @@
     } else {
         [self configureSliderWithMin:0 andMax:0 andValue:0];
     }
+    
+    //wave
+//    if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
+//        CGFloat ratio = ([_audioPlayer averagePowerInDecibelsForChannel:1] + 60) / 60;
+//        //NSLog(@"%f", ratio);
+//        [_dtView.ratios addObject:[NSNumber numberWithFloat:ratio]];
+//        [_dtView reDraw];
+//    }
 }
 
 - (void)updatePlayerState {
