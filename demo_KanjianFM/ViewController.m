@@ -100,23 +100,6 @@
     [_audioPlayer seekToTime:self.slider.value];
 }
 
-- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
-    if (event.type == UIEventTypeRemoteControl) {
-        switch (event.subtype) {
-            case UIEventSubtypeRemoteControlTogglePlayPause:
-                if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
-                    [_audioPlayer resume];
-                } else if (_audioPlayer.state == STKAudioPlayerStatePaused) {
-                    [_audioPlayer resume];
-                }
-                break;
-                
-            default:
-                break;
-        }
-    }
-}
-
 #pragma UITableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

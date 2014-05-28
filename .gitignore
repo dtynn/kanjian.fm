@@ -1,7 +1,7 @@
 *.py[co]
 
 .idea/
-xcuserdata/
+xcuserdata
 
 # Packages
 *.egg

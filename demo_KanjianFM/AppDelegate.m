@@ -46,6 +46,11 @@
     _audioPlayer.volume = 1.0;
     
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+    return YES;
+}
+
+- (BOOL)canBecomeFirstResponder {
     return YES;
 }
 							
@@ -95,6 +100,22 @@
     [self configurePlayingInfoWithSong:nil];
 }
 
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    if (event.type == UIEventTypeRemoteControl) {
+        switch (event.subtype) {
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
+                    [_audioPlayer resume];
+                } else if (_audioPlayer.state == STKAudioPlayerStatePaused) {
+                    [_audioPlayer resume];
+                }
+                break;
+                
+            default:
+                break;
+        }
+    }
+}
 
 - (void)configurePlayingInfoWithSong:(SongItem *)song {
     [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
