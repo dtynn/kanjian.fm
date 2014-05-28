@@ -79,7 +79,7 @@
     }
     if (_audioPlayer.state == STKAudioPlayerStateStopped) {
         NSLog(@"### STOPED ###");
-        self.dataModel.playingIndex = -1;
+        [self.delegate audioPlayerViewDifFinishPlaying];
     }
     if (_audioPlayer.state != STKAudioPlayerStatePlaying && _audioPlayer.state != STKAudioPlayerStatePaused && _audioPlayer.state != STKAudioPlayerStateBuffering && _audioPlayer.state != STKAudioPlayerStateStopped) {
         return;
@@ -98,6 +98,23 @@
         return;
     }
     [_audioPlayer seekToTime:self.slider.value];
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    if (event.type == UIEventTypeRemoteControl) {
+        switch (event.subtype) {
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
+                    [_audioPlayer resume];
+                } else if (_audioPlayer.state == STKAudioPlayerStatePaused) {
+                    [_audioPlayer resume];
+                }
+                break;
+                
+            default:
+                break;
+        }
+    }
 }
 
 #pragma UITableView
@@ -135,7 +152,7 @@
         SongItem *song = [self.dataModel selectSongInPlaylistAtIndex:indexPath.row];
         self.dataModel.playingIndex = indexPath.row;
         [self.tableView reloadData];
-        [self.delegate audioPlayerViewPlay:self withUrl:song.url];
+        [self.delegate audioPlayerViewPlay:self withSong:song];
     } else if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
         [_audioPlayer pause];
     } else if (_audioPlayer.state == STKAudioPlayerStatePaused) {

@@ -11,7 +11,9 @@
 #import "ViewController.h"
 #import "STKAudioPlayer.h"
 #import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 #import "QueueId.h"
+#import "SongItem.h"
 
 @implementation AppDelegate {
     DataModel *_dataModel;
@@ -43,6 +45,7 @@
     _audioPlayer.meteringEnabled = YES;
     _audioPlayer.volume = 1.0;
     
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     return YES;
 }
 							
@@ -71,16 +74,42 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
 }
 
 - (STKAudioPlayer *)getAudioPlayer {
     return _audioPlayer;
 }
 
-- (void)audioPlayerViewPlay:(ViewController *)controller withUrl:(NSString *)url {
-    NSURL *urlToPlay = [NSURL URLWithString:url];
-    STKDataSource *dataSrc = [STKAudioPlayer dataSourceFromURL:urlToPlay];
-    [_audioPlayer setDataSource:dataSrc withQueueItemId:[[QueueId alloc] initWithUrl:urlToPlay andCount:0]];
+- (void)audioPlayerViewPlay:(ViewController *)controller withSong:(SongItem *)song {
+    if (song && song.title && song.url) {
+        NSURL *urlToPlay = [NSURL URLWithString:song.url];
+        STKDataSource *dataSrc = [STKAudioPlayer dataSourceFromURL:urlToPlay];
+        [_audioPlayer setDataSource:dataSrc withQueueItemId:[[QueueId alloc] initWithUrl:urlToPlay andCount:0]];
+        [self configurePlayingInfoWithSong:song];
+    }
 }
+
+- (void)audioPlayerViewDifFinishPlaying {
+    _dataModel.playingIndex = -1;
+    [self configurePlayingInfoWithSong:nil];
+}
+
+
+- (void)configurePlayingInfoWithSong:(SongItem *)song {
+    [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
+    if (song) {
+        if (NSClassFromString(@"MPNowPlayingInfoCenter")) {
+            NSMutableDictionary *info = [[NSMutableDictionary alloc] init];
+            [info setValue:song.title forKey:MPMediaItemPropertyTitle];
+            [info setValue:@"看见FM" forKey:MPMediaItemPropertyArtist];
+            MPMediaItemArtwork *cover = [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:@"kanjianfm"]];
+            [info setObject:cover forKey:MPMediaItemPropertyArtwork];
+            
+            [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:info];
+        }
+    }
+}
+
 
 @end

@@ -11,11 +11,13 @@
 
 @class DataModel;
 @class ViewController;
+@class SongItem;
 
 @protocol AudioPlayerViewDelegate <NSObject>
 
 - (STKAudioPlayer *) getAudioPlayer;
-- (void) audioPlayerViewPlay:(ViewController *)controller withUrl:(NSString *)url;
+- (void) audioPlayerViewPlay:(ViewController *)controller withSong:(SongItem *)song;
+- (void) audioPlayerViewDifFinishPlaying;
 
 @end
 
