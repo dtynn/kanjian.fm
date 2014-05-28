@@ -9,6 +9,7 @@
 #import "DataModel.h"
 #import "Playlist.h"
 #import "SongItem.h"
+#import "APIClient.h"
 
 @implementation DataModel
 
@@ -24,7 +25,14 @@
 }
 
 - (SongItem *)selectSongInPlaylistAtIndex:(NSInteger)index {
-    return self.playlist.songs[index];
+    if (index >= 0 && index < [self.playlist.songs count]) {
+        return self.playlist.songs[index];
+    }
+    return nil;
+}
+
+- (NSURLSessionTask *)loadSongs:(void (^)(NSError *))callback {
+    return [self.playlist requestForSongs:callback];
 }
 
 @end

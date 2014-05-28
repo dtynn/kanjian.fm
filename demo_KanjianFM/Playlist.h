@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong)NSMutableArray *songs;
 
+- (NSURLSessionDataTask *)requestForSongs:(void (^)(NSError *))callback;
+
 @end

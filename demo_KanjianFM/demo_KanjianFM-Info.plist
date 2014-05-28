@@ -6,7 +6,7 @@
 	<string>en</string>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>audio</string>
+		<string>App plays audio</string>
 	</array>
 	<key>CFBundleDisplayName</key>
 	<string>${PRODUCT_NAME}</string>

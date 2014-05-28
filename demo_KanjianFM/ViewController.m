@@ -26,10 +26,22 @@
     [self loadAudioPlayer];
 }
 
+- (void)reload:(id)sender {
+    [self.dataModel loadSongs:^(NSError *error) {
+        if (!error) {
+            NSLog(@"do reload");
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"error!");
+        }
+    }];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self reload:nil];
     [self setupTimer];
 }
 

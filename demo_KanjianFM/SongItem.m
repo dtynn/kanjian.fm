@@ -10,4 +10,12 @@
 
 @implementation SongItem
 
+- (id)initWithAttrs:(NSDictionary *)attrs {
+    if ((self = [super init])) {
+        self.title = [attrs valueForKeyPath:@"title"];
+        self.url = [attrs valueForKeyPath:@"url"];
+    }
+    return self;
+}
+
 @end

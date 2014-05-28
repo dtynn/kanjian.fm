@@ -19,4 +19,6 @@
 @property (nonatomic, copy)NSString *lyrics;
 @property (nonatomic, copy)NSString *url;
 
+- (id)initWithAttrs:(NSDictionary *)attrs;
+
 @end

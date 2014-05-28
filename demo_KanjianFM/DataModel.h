@@ -18,5 +18,6 @@
 
 - (NSInteger) numberOfSongsInPlaylist;
 - (SongItem *) selectSongInPlaylistAtIndex:(NSInteger)index;
+- (NSURLSessionTask *)loadSongs:(void (^)(NSError *error))callback;
 
 @end
