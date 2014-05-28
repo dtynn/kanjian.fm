@@ -111,6 +111,18 @@
                 }
                 break;
                 
+            case UIEventSubtypeRemoteControlPlay:
+                if (_audioPlayer.state == STKAudioPlayerStatePaused) {
+                    [_audioPlayer resume];
+                }
+                break;
+                
+            case UIEventSubtypeRemoteControlPause:
+                if (_audioPlayer.state == STKAudioPlayerStatePlaying) {
+                    [_audioPlayer pause];
+                }
+                break;
+                
             default:
                 break;
         }
