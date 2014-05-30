@@ -8,7 +8,7 @@
 
 #import "APIClient.h"
 
-static NSString* const APIBaseUrl = @"http://t-test-public.qiniudn.com/";
+static NSString* const APIBaseUrl = @"http://www.kanjian.com";
 
 @implementation APIClient
 

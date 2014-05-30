@@ -43,7 +43,7 @@
 
 
 - (NSURLSessionDataTask *)requestForSongs:(void (^)(NSError *))callback {
-    return [[APIClient sharedClient] GET:@"kanjianfm/20140528/playlist.json" parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON){
+    return [[APIClient sharedClient] GET:@"/api/wanglin/fm" parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON){
         NSLog(@"request success");
         NSArray *songsFromResponce = [JSON valueForKeyPath:@"songs"];
         NSMutableArray *mutableSongs = [NSMutableArray arrayWithCapacity:[songsFromResponce count]];
